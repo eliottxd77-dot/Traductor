@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arunaka, traductor español-aymara para niños de nivel primario.">
+  <title>Arunaka | Aprende aymara jugando</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Arunaka, ir al inicio">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span><strong>Arunaka</strong><small>Aprende aymara</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a class="nav-link active" href="#inicio" data-tab="inicio">Inicio</a>
+        <a class="nav-link" href="#diccionario" data-tab="diccionario">Diccionario</a>
+        <a class="nav-link" href="#historial" data-tab="historial">Historial</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero-section tab-panel" data-tab-panel="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="sun-dot"></span> Una palabra nueva cada día</p>
+          <h1>Descubre el mundo en <span>aymara</span></h1>
+          <p class="hero-text">Aprende, juega y comparte palabras de una de nuestras lenguas más bonitas. ¡Traducir es muy fácil!</p>
+          <a class="primary-button" href="#traductor">Empezar a traducir <span aria-hidden="true">→</span></a>
+          <div class="hero-stats" aria-label="Características de Arunaka">
+            <span><b>300+</b> palabras básicas</span>
+            <span><b>100%</b> para aprender</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Ilustración de aprendizaje aymara" role="img">
+          <div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+          <div class="sun">☀</div><div class="cloud cloud-one">☁</div><div class="cloud cloud-two">☁</div>
+          <div class="book-character"><span class="book-face">◡</span><span class="book-page"></span></div>
+          <span class="art-word word-one">kusi</span><span class="art-word word-two">suma</span>
+          <span class="star star-one">✦</span><span class="star star-two">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="traductor" class="translator-section section-pad tab-panel" data-tab-panel="inicio">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">Conversor de palabras</p><h2 id="translator-title">Traductor español - aymara</h2></div><span class="section-number">01</span></div>
+        <div class="translator-card">
+          <div class="language-box"><label id="input-language-label" for="spanish-input">Escribe en español</label><textarea id="spanish-input" rows="3" placeholder="Ejemplo: buenos días" autocomplete="off"></textarea><span class="input-hint" id="input-hint">Prueba con: sol, agua, mamá...</span></div>
+          <div class="translator-actions"><button id="switch-languages" class="switch-button" type="button" aria-label="Cambiar dirección de traducción" title="Cambiar dirección">⇄</button><button id="translate-button" class="translate-button" type="button" aria-label="Traducir palabra">↔<span>Traducir</span></button></div>
+          <div class="language-box result-box"><label id="output-language-label" for="aymara-output">Resultado en aymara <span class="speaker" id="speak-button" role="button" tabindex="0" aria-label="Escuchar traducción">🔊</span></label><div id="aymara-output" class="translation-output" aria-live="polite">suma uru</div><span class="input-hint" id="translation-note">¡Hola! Así se dice “buenos días”.</span></div>
+        </div>
+        <p id="translation-feedback" class="feedback" role="status"></p>
+      </div>
+    </section>
+
+    <section id="diccionario" class="dictionary-section section-pad tab-panel" data-tab-panel="diccionario" hidden>
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">Explora y aprende</p><h2>Diccionario ilustrado</h2><p class="section-description">Busca una palabra y descubre cómo se dice en aymara.</p></div><span class="section-number">02</span></div>
+        <div class="dictionary-toolbar"><label class="search-field"><span aria-hidden="true">⌕</span><input id="dictionary-search" type="search" placeholder="Buscar una palabra..." autocomplete="off"></label><div class="category-tabs" role="group" aria-label="Filtrar por categoría"><button class="category-tab active" type="button" data-category="Todos">Todos</button><button class="category-tab" type="button" data-category="Naturaleza">Naturaleza</button><button class="category-tab" type="button" data-category="Animales">Animales</button><button class="category-tab" type="button" data-category="Familia">Familia</button><button class="category-tab" type="button" data-category="Alimentos">Alimentos</button><button class="category-tab" type="button" data-category="Hogar">Hogar</button><button class="category-tab" type="button" data-category="Lugares y transporte">Lugares y transporte</button><button class="category-tab" type="button" data-category="Saludos y expresiones">Saludos y expresiones</button><button class="category-tab" type="button" data-category="Cualidades y colores">Cualidades y colores</button><button class="category-tab" type="button" data-category="Números">Números</button><button class="category-tab" type="button" data-category="Ubicación">Ubicación</button><button class="category-tab" type="button" data-category="Acciones">Acciones</button><button class="category-tab" type="button" data-category="Escuela">Escuela</button><button class="category-tab" type="button" data-category="Cuerpo y salud">Cuerpo y salud</button><button class="category-tab" type="button" data-category="Cultura">Cultura</button><button class="category-tab" type="button" data-category="Otros">Otros</button></div></div>
+        <div id="dictionary-grid" class="dictionary-grid"></div>
+        <p id="empty-dictionary" class="empty-state" hidden>No encontramos esa palabra. Prueba con otra búsqueda.</p>
+      </div>
+    </section>
+
+    <section id="historial" class="history-section section-pad tab-panel" data-tab-panel="historial" hidden>
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">Tus palabras</p><h2>Historial de aprendizaje</h2><p class="section-description">Aquí aparecen tus búsquedas recientes y tus palabras favoritas.</p></div><span class="section-number">03</span></div>
+        <div class="history-layout"><div class="history-panel"><div class="panel-title"><h3>Recientes</h3><button id="clear-history" class="text-button" type="button">Limpiar historial</button></div><div id="history-list" class="history-list"></div><p id="empty-history" class="empty-state">Todavía no tienes búsquedas. ¡Explora el diccionario!</p></div><aside class="favorites-panel"><div class="panel-title"><h3>Favoritos <span aria-hidden="true">♥</span></h3></div><div id="favorites-list" class="favorites-list"></div><p id="empty-favorites" class="empty-state">Guarda palabras con el corazón para verlas aquí.</p></aside></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-wrap"><div class="brand footer-brand"><span class="brand-mark" aria-hidden="true">A</span><span><strong>Arunaka</strong><small>Palabras que conectan</small></span></div><p>Hecho para aprender y valorar el idioma aymara.</p><p>© <span id="current-year"></span> Arunaka</p></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
